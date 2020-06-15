@@ -3,12 +3,12 @@ package com.loopeer.example.shadows
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.flexbox.FlexboxLayout
 import com.loopeer.shadow.ShadowView
 import kotlinx.android.synthetic.main.activity_shadow_view.*
@@ -31,7 +31,7 @@ class ShadowViewActivity : AppCompatActivity() {
 
     class ShadowViewRecyclerAdapter(val shadowView: ShadowView) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-        override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
             val inflater = LayoutInflater.from(parent?.context)
             return when (viewType) {
                 R.layout.list_item_color_select -> {
@@ -43,7 +43,7 @@ class ShadowViewActivity : AppCompatActivity() {
             }
         }
 
-        override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
+        override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
             if (holder is ShadowViewSeekItemHolder) {
                 holder.bind(SeekItem.values()[position], shadowView)
             } else if (holder is ShadowViewColorItemHolder) {

@@ -1,7 +1,7 @@
 package com.loopeer.example.shadows
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class ShadowViewDemo2Activity : AppCompatActivity() {
 

@@ -1,8 +1,8 @@
 package com.loopeer.example.shadows
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_card_view.*
 
 class CardViewActivity : AppCompatActivity() {
